@@ -1,5 +1,7 @@
 package com.example;
 
+
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,12 +11,16 @@ import javax.persistence.Table;
 //@Entity(name = "student_details") //to change the class/entity name hibernate will create the table with updated name.
 //@Table(name="mystudents") //the entity name will be same but only table will be created with this name 
 
-@Entity   //used to mark class as entity. we can use this annotation on class.
+//Entity is used to mark class as entity. we can use this annotation on class.
+@Entity   
 public class Student {
-	@Id   //will mark id as primary key. if we want to make any column as primary key then we will use this annotation on that column name.
+	@Id   //will mark id column as primary key. if we want to make any column as primary key then we will use this annotation on that column name.
 	private int id;
 	private String name;
 	private String city;
+	
+	@Embedded
+	private Certificate certi;
 	public Student(int id, String name, String city) {
 		super();
 		this.id = id;
@@ -42,5 +48,16 @@ public class Student {
 	} 
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public Certificate getCerti() {
+		return certi;
+	}
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + "]";
 	}
 }
