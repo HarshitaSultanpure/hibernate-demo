@@ -31,7 +31,7 @@ public class App
         
         Address ad = new Address();
         //id will be auto incremented
-        ad.setStreet("stree1");
+        ad.setStreet("street1");
         ad.setCity("pune");
         ad.setOpen(true);
         ad.setAddedDate(new Date());
