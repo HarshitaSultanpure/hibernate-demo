@@ -21,4 +21,3 @@ The project covers core Hibernate functionalities, multiple mapping techniques, 
     * MySQL – Database
     * Maven – Dependency management
     * JPA Annotations – For mapping entities
-    
