@@ -1,9 +1,13 @@
 package com.mapp;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -12,21 +16,26 @@ public class Question {
 	@Column(name="question_id") //column will be created with this name...
 	private int questionId;
 	private String question;
-	
+/*	
 	@OneToOne  //1 question can have only one answer
 	@JoinColumn(name="ans_id") // to change the column name of foreign key...
 	private Answer answer;
+*/
 	
-	public Question(int questionId, String question, Answer answer) {
-		super();
-		this.questionId = questionId;
-		this.question = question;
-		this.answer = answer;
+	@OneToMany(mappedBy = "ques",fetch=FetchType.EAGER) //to done eager loading bydefault lazy loading happens we can mark lazy forcefully as well
+	private List<Answer> answers;
+	
+	public Question(int questionId, String question, List<Answer> answers) {
+	super();
+	this.questionId = questionId;
+	this.question = question;
+	this.answers = answers;
 	}
 	public Question() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public int getQuestionId() {
 		return questionId;
 	}
@@ -39,10 +48,11 @@ public class Question {
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	public Answer getAnswer() {
-		return answer;
+	public List<Answer> getAnswers() {
+		return answers;
 	}
-	public void setAnswer(Answer answer) {
-		this.answer = answer;
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
 	}
+	
 }

@@ -16,15 +16,20 @@
 		 
 		<!--auto create/update schema-->
 		<!-- <property name="hibernate.hbm2ddl.auto">update</property> --><!--if the table does not exist then only it will create this table automatically -->
-		<property name="hibernate.hbm2ddl.auto">create</property> <!--prev table will be deleted and will be created again-->
+		<property name="hibernate.hbm2ddl.auto">update</property> <!--prev table will be deleted and will be created again-->
 		 
 		<!--show sql in console-->
 		<property name="show_sql">true</property>   <!-- to see which queries are created-->
+		
+		<!--to format query for easy understanding-->
+		<property name="format_sql">true</property>
 		
 		<!--mapping class-->
 		<mapping class="com.example.Student"/> <!-- hibernate will treat this class entity and will create its table. for multiple classes we will use multiple mapping tags-->
 		<mapping class="com.example.Address"/> <!-- hibernate will treat this class entity and will create its table. for multiple classes we will use multiple mapping tags-->
 		<mapping class="com.mapp.Question"/>
 		<mapping class="com.mapp.Answer"/>
+		<mapping class="com.mapp1.Employee"/>
+		<mapping class="com.mapp1.Project"/>
 	</session-factory>
 </hibernate-configuration>

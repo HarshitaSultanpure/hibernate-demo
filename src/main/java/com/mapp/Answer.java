@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -14,8 +15,10 @@ public class Answer {
 	private int answerId;
 	private String answer;
 	
-	@OneToOne(mappedBy = "answer") //join(foreign key) column Question wali table me bnega, answer wali table me foreign key nhi bnega
-	@JoinColumn(name="ques_id")
+//	@OneToOne(mappedBy = "answer") //join(foreign key) column Question wali table me bnega, answer wali table me foreign key nhi bnega
+//	@JoinColumn(name="ques_id")
+	
+	@ManyToOne
 	private Question ques;
 	
 	public Answer(int answerId, String answer) {
