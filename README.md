@@ -27,8 +27,13 @@ The project covers core Hibernate functionalities, multiple mapping techniques, 
     * Hibernate Object States – Transient, Persistent, and Detached states.
 
   🛠️ Tech Stack
+  
     * Java – Core language
+    
     * Hibernate ORM – For object-relational mapping
+    
     * MySQL – Database
+    
     * Maven – Dependency management
+    
     * JPA Annotations – For mapping entities
