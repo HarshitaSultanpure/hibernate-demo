@@ -2,6 +2,7 @@ package com.mapp;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,7 +23,9 @@ public class Question {
 	private Answer answer;
 */
 	
-	@OneToMany(mappedBy = "ques",fetch=FetchType.EAGER) //to done eager loading bydefault lazy loading happens we can mark lazy forcefully as well
+	//@OneToMany(mappedBy = "ques",fetch=FetchType.EAGER) //to done eager loading bydefault lazy loading happens we can mark lazy forcefully as well
+	
+	@OneToMany(mappedBy = "ques",fetch=FetchType.LAZY,cascade = CascadeType.ALL) //fetch delete sare pr kaam krne k liye all lga denge, to save only we will use PERSIST
 	private List<Answer> answers;
 	
 	public Question(int questionId, String question, List<Answer> answers) {
