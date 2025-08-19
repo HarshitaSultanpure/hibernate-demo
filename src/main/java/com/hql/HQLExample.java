@@ -19,7 +19,7 @@ public class HQLExample {
 		Session s=factory.openSession();
 		
 		//HQL 
-		
+		//hql queries are not native queries they does not depend on a particular database.
 		//Syntax 
 		//String query = "from Student"; //will select all columns from Student table
 		//String query = "from Student where city='pune'"; //get data from particular column
@@ -27,7 +27,7 @@ public class HQLExample {
 		
 		String query = "from Student as s where city=:x and s.name=:n";
 		
-		Query q1 = s.createQuery(query); //Session method to get query object to fire query
+		Query q1 = s.createQuery(query); //it expects HQL Session method to get query object to fire query
 		q1.setParameter("x", "pune"); //to set dynamic value
 		q1.setParameter("n", "itasu");
 		

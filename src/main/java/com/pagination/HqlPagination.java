@@ -18,8 +18,7 @@ public class HqlPagination {
 		Session s = factory.openSession();
 		Query query = s.createQuery("from Student",Student.class); //by generic we tell that this query expecting Studnet data.
 		
-		//implementing pagination using hibernate
-		
+		//implementing pagination using hibernate.......
 		query.setFirstResult(1); //from where we want to start.
 		query.setMaxResults(5); // max size of page or max amount of values we want to fetch
 		
