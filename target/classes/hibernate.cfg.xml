@@ -15,8 +15,8 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		 
 		<!--auto create/update schema-->
-		<!-- <property name="hibernate.hbm2ddl.auto">update</property> --><!--if the table does not exist then only it will create this table automatically -->
-		<property name="hibernate.hbm2ddl.auto">update</property> <!--prev table will be deleted and will be created again-->
+		 <property name="hibernate.hbm2ddl.auto">update</property> <!--if the table does not exist then only it will create this table automatically -->
+		<!--<property name="hibernate.hbm2ddl.auto">create</property> --> <!--prev table will be deleted and will be created again-->
 		 
 		<!--show sql in console-->
 		<property name="show_sql">true</property>   <!-- to see which queries are created-->
