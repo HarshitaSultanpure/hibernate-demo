@@ -23,6 +23,12 @@
 		<!--to format query for easy understanding-->
 		<property name="format_sql">true</property>
 		
+		<!--manually enabling the second level cache that we want to use second level cache-->
+		<property name="cache.use_second_level_cache">true</property> 
+		
+		<!-- to tell the class of second level cache-->
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		
 		<!--mapping class-->
 		<mapping class="com.example.Student"/> <!-- hibernate will treat this class entity and will create its table. for multiple classes we will use multiple mapping tags-->
 		<mapping class="com.example.Address"/> <!-- hibernate will treat this class entity and will create its table. for multiple classes we will use multiple mapping tags-->

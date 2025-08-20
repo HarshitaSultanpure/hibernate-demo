@@ -48,7 +48,6 @@
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/classmate-1.3.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/hibernate-commons-annotations-5.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/hibernate-core-5.2.11.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/jboss-logging-3.3.0.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/lucene-core-5.5.4.jar"/>
@@ -56,11 +55,11 @@
 	<classpathentry kind="lib" path="C:/Users/manishpc/Documents/hibernate-search-5.8.0.Final/dist/lib/required/xml-apis-1.3.03.jar"/>
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="ignore_optional_problems" value="true"/>
 			<attribute name="m2e-apt" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
