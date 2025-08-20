@@ -36,5 +36,6 @@
 		<mapping class="com.mapp.Answer"/>
 		<mapping class="com.mapp1.Employee"/>
 		<mapping class="com.mapp1.Project"/>
+		<mapping resource="com/mapping/xml/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
